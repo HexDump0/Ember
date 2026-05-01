@@ -1,1 +1,20 @@
 models/bak/*
+kicad/ember-backups/*
+*-bak
+*.bak
+*.tmp
+*.kicad_prl
+
+*-cache.lib
+*.net
+*.rpt
+
+gerbers/
+drill/
+plot/
+fabrication/
+
+# OS
+.DS_Store
+Thumbs.db
+fp-info-cache

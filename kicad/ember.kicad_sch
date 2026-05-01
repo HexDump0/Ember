@@ -1,0 +1,56 @@
+(kicad_sch
+	(version 20250114)
+	(generator "eeschema")
+	(generator_version "9.0")
+	(uuid "d47a8d18-f726-41c5-b6f5-64829cbcbaae")
+	(paper "A4")
+	(lib_symbols)
+	(sheet
+		(at 21.59 33.02)
+		(size 54.61 39.37)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "705ac1df-21a1-4c3b-833d-7e3445e72cf5")
+		(property "Sheetname" "Launch Control"
+			(at 21.59 32.3084 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "launch_control.kicad_sch"
+			(at 21.59 72.9746 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "ember"
+				(path "/d47a8d18-f726-41c5-b6f5-64829cbcbaae"
+					(page "2")
+				)
+			)
+		)
+	)
+	(sheet_instances
+		(path "/"
+			(page "1")
+		)
+	)
+	(embedded_fonts no)
+)
