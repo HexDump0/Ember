@@ -8,6 +8,8 @@ kicad/ember-backups/*
 *-cache.lib
 *.net
 *.rpt
+*.lck
+*.FCBak
 
 gerbers/
 drill/
