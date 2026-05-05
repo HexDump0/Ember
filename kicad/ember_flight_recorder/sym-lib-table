@@ -4,4 +4,5 @@
 	(lib (name "ESP32-C3-SuperMini") (type "KiCad") (uri "${KIPRJMOD}/external/KiCad_ESP32-C3-SuperMini/ESP32-C3-SuperMini.kicad_sym") (options "") (descr ""))
 	(lib (name "FS8205A") (type "KiCad") (uri "${KIPRJMOD}/external/FS8205A/2026-05-04_11-20-35.kicad_sym") (options "") (descr ""))
 	(lib (name "usini_sensors") (type "KiCad") (uri "${KIPRJMOD}/external/usini/usini_sensors.kicad_sym") (options "") (descr ""))
+	(lib (name "ESP32-C3_SUPERMINI_SMD") (type "KiCad") (uri "${KIPRJMOD}/external/ESP32-C3_SUPERMINI_SMD/ESP32-C3_SUPERMINI_SMD.kicad_sym") (options "") (descr ""))
 )

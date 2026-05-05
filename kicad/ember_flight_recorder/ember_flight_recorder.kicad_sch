@@ -1113,35 +1113,38 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "ESP32-C3-SuperMini:ESP32-C3-SuperMini"
+		(symbol "ESP32-C3_SUPERMINI_SMD:ESP32-C3_SUPERMINI_SMD"
+			(pin_names
+				(offset 1.016)
+			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
 			(in_pos_files yes)
 			(duplicate_pin_numbers_are_jumpers no)
-			(property "Reference" "U1"
-				(at 2.286 5.08 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "ESP32-C3-SuperMini"
-				(at 2.1433 -21.59 0)
+			(property "Reference" "U"
+				(at -12.7 16.002 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(justify left)
+					(justify left bottom)
 				)
 			)
-			(property "Footprint" "ESP32-C3-SuperMini:ESP32-C3-SuperMini"
+			(property "Value" "ESP32-C3_SUPERMINI_SMD"
+				(at -12.7 -20.32 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left bottom)
+				)
+			)
+			(property "Footprint" "ESP32-C3_SUPERMINI_SMD:MODULE_ESP32-C3_SUPERMINI"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -1150,6 +1153,7 @@
 					(font
 						(size 1.27 1.27)
 					)
+					(justify bottom)
 				)
 			)
 			(property "Datasheet" ""
@@ -1163,7 +1167,7 @@
 					)
 				)
 			)
-			(property "Description" ""
+			(property "Description" "Super tiny ESP32-C3 board"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -1172,9 +1176,10 @@
 					(font
 						(size 1.27 1.27)
 					)
+					(justify bottom)
 				)
 			)
-			(property "Buy" "https://makerbazar.in/products/esp32-c3-supermini-iot-development-board?variant=48250998391024"
+			(property "MF" "Espressif Systems"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -1183,9 +1188,10 @@
 					(font
 						(size 1.27 1.27)
 					)
+					(justify bottom)
 				)
 			)
-			(property "Buy_ALT" "https://www.amazon.in/DELLZO-ESP32-C3-Development-Bluetooth-Pre-Loaded/dp/B0G9RGBKDX?crid=3GXPQ4BNUKZXY&dib=eyJ2IjoiMSJ9.3sIXyPvrdac91DLWzGpUGL-fXJEEhjOKONiKk_wcCVSvbNqyOSa1Hg0MylzNC-sA8r0Cu9T0C_kaoDJ0bydslR2-QGjjzyvPwxjQUnZWvXYGBe0RHLA3faxwuxqLlHIw0oIbmc-YrubtWt4y4QUSNn55fUvWVqecoZyjixtUGMVBGIdz_UEVys0xsu-O9hL1fSaF7JBMClclFvA2W2PqVVlHmHoAO03S9NCbDGsoMg8.2aMkfk1oUqAnieAcGZTRyCSSgekjXvNToKVURfZ_XOg&dib_tag=se&keywords=esp32%2Bsuper%2Bmini%2Bc3&qid=1777961646&sprefix=esp32%2Bsuper%2Bmini%2Bc%2Caps%2C395&sr=8-3&th=1"
+			(property "MAXIMUM_PACKAGE_HEIGHT" "4.2mm"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -1194,9 +1200,10 @@
 					(font
 						(size 1.27 1.27)
 					)
+					(justify bottom)
 				)
 			)
-			(property "ki_keywords" "RF Radio BT ESP ESP32-C3 Espressif onboard PCB antenna"
+			(property "Package" "None"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -1205,335 +1212,404 @@
 					(font
 						(size 1.27 1.27)
 					)
+					(justify bottom)
 				)
 			)
-			(symbol "ESP32-C3-SuperMini_1_1"
+			(property "Price" "None"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify bottom)
+				)
+			)
+			(property "Check_prices" "https://www.snapeda.com/parts/ESP32-C3%20SuperMini_SMD/Espressif+Systems/view-part/?ref=eda"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify bottom)
+				)
+			)
+			(property "STANDARD" "Manufacturer Recommendations"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify bottom)
+				)
+			)
+			(property "PARTREV" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify bottom)
+				)
+			)
+			(property "SnapEDA_Link" "https://www.snapeda.com/parts/ESP32-C3%20SuperMini_SMD/Espressif+Systems/view-part/?ref=snap"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify bottom)
+				)
+			)
+			(property "MP" "ESP32-C3 SuperMini_SMD"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify bottom)
+				)
+			)
+			(property "Availability" "Not in stock"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify bottom)
+				)
+			)
+			(property "MANUFACTURER" "Espressif"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify bottom)
+				)
+			)
+			(symbol "ESP32-C3_SUPERMINI_SMD_0_0"
 				(rectangle
-					(start -11.43 12.7)
-					(end 11.43 -19.05)
+					(start -12.7 -17.78)
+					(end 12.7 15.24)
 					(stroke
-						(width 0)
-						(type solid)
+						(width 0.254)
+						(type default)
 					)
 					(fill
 						(type background)
 					)
 				)
 				(pin bidirectional line
-					(at 13.97 -3.81 180)
-					(length 2.54)
+					(at -17.78 5.08 0)
+					(length 5.08)
 					(name "GPIO0"
 						(effects
 							(font
-								(size 1.27 1.27)
+								(size 1.016 1.016)
+							)
+						)
+					)
+					(number "0"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at -17.78 2.54 0)
+					(length 5.08)
+					(name "GPIO1"
+						(effects
+							(font
+								(size 1.016 1.016)
 							)
 						)
 					)
 					(number "1"
 						(effects
 							(font
-								(size 1.27 1.27)
+								(size 1.016 1.016)
 							)
 						)
 					)
-					(alternate "ADC1_CH0" input line)
-					(alternate "RTC" bidirectional line)
-					(alternate "XTAL_32K_P" bidirectional line)
 				)
 				(pin bidirectional line
-					(at 13.97 -1.27 180)
-					(length 2.54)
-					(name "GPIO1"
+					(at -17.78 0 0)
+					(length 5.08)
+					(name "GPIO2"
 						(effects
 							(font
-								(size 1.27 1.27)
+								(size 1.016 1.016)
 							)
 						)
 					)
 					(number "2"
 						(effects
 							(font
-								(size 1.27 1.27)
+								(size 1.016 1.016)
 							)
 						)
 					)
-					(alternate "ADC1_CH1" input line)
-					(alternate "RTC" bidirectional line)
-					(alternate "XTAL_32K_N" bidirectional line)
 				)
 				(pin bidirectional line
-					(at 13.97 1.27 180)
-					(length 2.54)
-					(name "GPIO2"
+					(at -17.78 -2.54 0)
+					(length 5.08)
+					(name "GPIO3"
 						(effects
 							(font
-								(size 1.27 1.27)
+								(size 1.016 1.016)
 							)
 						)
 					)
 					(number "3"
 						(effects
 							(font
-								(size 1.27 1.27)
+								(size 1.016 1.016)
 							)
 						)
 					)
-					(alternate "ADC1_CH2" input line)
-					(alternate "RTC" bidirectional line)
-					(alternate "Strapping Pin" input line)
 				)
-				(pin bidirectional line
-					(at 13.97 3.81 180)
-					(length 2.54)
-					(name "GPIO3"
+				(pin power_in line
+					(at 17.78 10.16 180)
+					(length 5.08)
+					(name "3V3"
 						(effects
 							(font
-								(size 1.27 1.27)
+								(size 1.016 1.016)
+							)
+						)
+					)
+					(number "3.3"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at -17.78 -5.08 0)
+					(length 5.08)
+					(name "GPIO4"
+						(effects
+							(font
+								(size 1.016 1.016)
 							)
 						)
 					)
 					(number "4"
 						(effects
 							(font
-								(size 1.27 1.27)
+								(size 1.016 1.016)
 							)
 						)
 					)
-					(alternate "ADC1_CH3" input line)
-					(alternate "RTC" bidirectional line)
 				)
 				(pin bidirectional line
-					(at 13.97 6.35 180)
-					(length 2.54)
-					(name "GPIO4"
+					(at -17.78 -7.62 0)
+					(length 5.08)
+					(name "GPIO5"
 						(effects
 							(font
-								(size 1.27 1.27)
+								(size 1.016 1.016)
 							)
 						)
 					)
 					(number "5"
 						(effects
 							(font
-								(size 1.27 1.27)
+								(size 1.016 1.016)
 							)
 						)
 					)
-					(alternate "ADC1_CH4" input line)
-					(alternate "JTAG_MTMS" bidirectional line)
-					(alternate "SPI_CLK" output line)
 				)
 				(pin power_in line
-					(at 1.27 15.24 270)
-					(length 2.54)
-					(name "3V3"
+					(at 17.78 12.7 180)
+					(length 5.08)
+					(name "5V"
 						(effects
 							(font
-								(size 1.27 1.27)
+								(size 1.016 1.016)
+							)
+						)
+					)
+					(number "5V"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at -17.78 -10.16 0)
+					(length 5.08)
+					(name "GPIO6"
+						(effects
+							(font
+								(size 1.016 1.016)
 							)
 						)
 					)
 					(number "6"
 						(effects
 							(font
-								(size 1.27 1.27)
+								(size 1.016 1.016)
 							)
 						)
 					)
 				)
-				(pin passive line
-					(at 0 -21.59 90)
-					(length 2.54)
-					(name "GND"
+				(pin bidirectional line
+					(at 17.78 5.08 180)
+					(length 5.08)
+					(name "GPIO7"
 						(effects
 							(font
-								(size 1.27 1.27)
+								(size 1.016 1.016)
 							)
 						)
 					)
 					(number "7"
 						(effects
 							(font
-								(size 1.27 1.27)
+								(size 1.016 1.016)
 							)
 						)
 					)
 				)
-				(pin passive line
-					(at -1.27 15.24 270)
-					(length 2.54)
-					(name "5V"
+				(pin bidirectional line
+					(at 17.78 2.54 180)
+					(length 5.08)
+					(name "GPIO8"
 						(effects
 							(font
-								(size 1.27 1.27)
+								(size 1.016 1.016)
 							)
 						)
 					)
 					(number "8"
 						(effects
 							(font
-								(size 1.27 1.27)
+								(size 1.016 1.016)
 							)
 						)
 					)
 				)
 				(pin bidirectional line
-					(at -13.97 6.35 0)
-					(length 2.54)
-					(name "GPIO5"
+					(at 17.78 0 180)
+					(length 5.08)
+					(name "GPIO9"
 						(effects
 							(font
-								(size 1.27 1.27)
+								(size 1.016 1.016)
 							)
 						)
 					)
 					(number "9"
 						(effects
 							(font
-								(size 1.27 1.27)
+								(size 1.016 1.016)
 							)
 						)
 					)
-					(alternate "ADC2_CH0" input line)
-					(alternate "JTAG_MTDI" bidirectional line)
-					(alternate "SPI_MISO" input line)
 				)
 				(pin bidirectional line
-					(at -13.97 3.81 0)
-					(length 2.54)
-					(name "GPIO6"
+					(at 17.78 -2.54 180)
+					(length 5.08)
+					(name "GPIO10"
 						(effects
 							(font
-								(size 1.27 1.27)
+								(size 1.016 1.016)
 							)
 						)
 					)
 					(number "10"
 						(effects
 							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(alternate "JTAG_MTCK" bidirectional line)
-					(alternate "SPI_MOSI" output line)
-				)
-				(pin bidirectional line
-					(at -13.97 1.27 0)
-					(length 2.54)
-					(name "GPIO7"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "11"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(alternate "JTAG_MTDO" bidirectional line)
-					(alternate "SPI_SS" output line)
-				)
-				(pin bidirectional line
-					(at -13.97 -2.54 0)
-					(length 2.54)
-					(name "GPIO8"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "12"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(alternate "I2C_SDA" bidirectional line)
-					(alternate "LED_BUILTIN" passive line)
-					(alternate "Strapping: Boot mode" input line)
-				)
-				(pin bidirectional line
-					(at -13.97 -5.08 0)
-					(length 2.54)
-					(name "GPIO9"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "13"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(alternate "I2C_SCL" output line)
-					(alternate "Strapping: Boot mode" input line)
-				)
-				(pin bidirectional line
-					(at -13.97 -8.89 0)
-					(length 2.54)
-					(name "GPIO10"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "14"
-						(effects
-							(font
-								(size 1.27 1.27)
+								(size 1.016 1.016)
 							)
 						)
 					)
 				)
 				(pin bidirectional line
-					(at -13.97 -11.43 0)
-					(length 2.54)
+					(at 17.78 -5.08 180)
+					(length 5.08)
 					(name "GPIO20"
 						(effects
 							(font
-								(size 1.27 1.27)
+								(size 1.016 1.016)
 							)
 						)
 					)
-					(number "15"
+					(number "20"
 						(effects
 							(font
-								(size 1.27 1.27)
+								(size 1.016 1.016)
 							)
 						)
 					)
-					(alternate "UART0_RX" input line)
 				)
 				(pin bidirectional line
-					(at -13.97 -13.97 0)
-					(length 2.54)
+					(at 17.78 -7.62 180)
+					(length 5.08)
 					(name "GPIO21"
 						(effects
 							(font
-								(size 1.27 1.27)
+								(size 1.016 1.016)
 							)
 						)
 					)
-					(number "16"
+					(number "21"
 						(effects
 							(font
-								(size 1.27 1.27)
+								(size 1.016 1.016)
 							)
 						)
 					)
-					(alternate "UART0_TX" output line)
+				)
+				(pin power_in line
+					(at 17.78 -15.24 180)
+					(length 5.08)
+					(name "GND"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+					(number "G"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
 				)
 			)
 			(embedded_fonts no)
@@ -3926,6 +4002,12 @@
 		(uuid "54cc8b01-c617-4f77-8c3e-23823a56d5a1")
 	)
 	(junction
+		(at 114.3 130.81)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "73174553-34b7-4ae4-8265-68e47e0d35f5")
+	)
+	(junction
 		(at 39.37 55.88)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -3986,22 +4068,10 @@
 		(uuid "bb31c8a7-5f8e-4929-9020-e6967aea6fe1")
 	)
 	(junction
-		(at 133.35 119.38)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "c38bbe46-af2a-4c6d-bf5e-aafee68416fc")
-	)
-	(junction
 		(at 114.3 80.01)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "c8d92009-040b-4393-932a-1a0781559fed")
-	)
-	(junction
-		(at 166.37 119.38)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "d3c68cf9-cc31-44e8-9bbb-897f6e398354")
 	)
 	(junction
 		(at 53.34 29.21)
@@ -4010,68 +4080,68 @@
 		(uuid "fdcb488b-4609-49c3-b9db-b346feb26c03")
 	)
 	(no_connect
-		(at 118.11 132.08)
-		(uuid "1d28657d-6b14-4802-bd50-94a7b40be5eb")
+		(at 118.11 146.05)
+		(uuid "38131bf8-0b9c-461e-9ea4-e53a5dce0774")
 	)
 	(no_connect
-		(at 146.05 139.7)
-		(uuid "352c7ab0-0fd4-4bec-9ca2-46861754cdc7")
-	)
-	(no_connect
-		(at 146.05 134.62)
-		(uuid "44f04c23-3d50-4743-aa5b-5c9f9b93055f")
-	)
-	(no_connect
-		(at 146.05 132.08)
-		(uuid "4cbb227d-ed05-4c91-a421-8f7e057dd2d7")
+		(at 118.11 135.89)
+		(uuid "3b4af6e2-dc44-4f39-86f8-29af66dba06e")
 	)
 	(no_connect
 		(at 66.04 135.89)
 		(uuid "59093707-b287-4f43-a744-688aebfd4b3f")
 	)
 	(no_connect
+		(at 118.11 143.51)
+		(uuid "5e055be8-ed94-4b5c-be04-f563f4cdc256")
+	)
+	(no_connect
 		(at 58.42 66.04)
 		(uuid "6091a66f-5628-40e8-9fcf-c775833108c1")
 	)
 	(no_connect
-		(at 130.81 120.65)
-		(uuid "67ab49da-b8e6-43df-a05d-4f38813ee19b")
+		(at 118.11 128.27)
+		(uuid "7dab01e9-ee32-496f-8da8-e26b2def874d")
 	)
 	(no_connect
-		(at 118.11 144.78)
-		(uuid "6d109c2f-3dc3-4678-9aba-3a09bddcfc02")
+		(at 153.67 143.51)
+		(uuid "a93d08c2-61b4-4f76-93d0-ebd8460daff7")
 	)
 	(no_connect
-		(at 118.11 134.62)
-		(uuid "834bbb7b-f2ea-461c-a1b5-28c852d416e4")
-	)
-	(no_connect
-		(at 118.11 129.54)
-		(uuid "86818f55-aa5f-4c76-9ee8-3867b7d06b11")
-	)
-	(no_connect
-		(at 146.05 137.16)
-		(uuid "9001bf4c-ecac-49ce-a581-58c2579ee4b0")
+		(at 153.67 146.05)
+		(uuid "ab59b840-b04d-44bc-9bac-e579107bae12")
 	)
 	(no_connect
 		(at 66.04 133.35)
 		(uuid "ba03cab4-069f-4a05-8923-4f405104c807")
 	)
 	(no_connect
-		(at 118.11 147.32)
-		(uuid "d0425edf-9211-4c5a-8c05-79a2cd328f69")
+		(at 118.11 148.59)
+		(uuid "c72c3eae-43a5-40cd-943a-4f598071e5c4")
+	)
+	(no_connect
+		(at 153.67 135.89)
+		(uuid "d3317f11-c289-4c37-91cb-6bde23c998a3")
+	)
+	(no_connect
+		(at 153.67 148.59)
+		(uuid "d70e1d19-3774-4cd2-9c2a-a40375b77f4a")
 	)
 	(no_connect
 		(at 99.06 66.04)
 		(uuid "dca7c275-561e-4c26-940e-3076887bcadc")
 	)
 	(no_connect
+		(at 153.67 151.13)
+		(uuid "de3c7f31-de8a-45a1-8754-c8cb5ad1c8b2")
+	)
+	(no_connect
 		(at 66.04 128.27)
 		(uuid "de60c673-0eee-4902-a76c-06406fdd830a")
 	)
 	(no_connect
-		(at 118.11 149.86)
-		(uuid "f1436fa6-6e72-425d-b4df-de2dadd448e8")
+		(at 153.67 140.97)
+		(uuid "e0931123-4683-483e-a8e3-d2fd8380fc8d")
 	)
 	(wire
 		(pts
@@ -4112,16 +4182,6 @@
 			(type default)
 		)
 		(uuid "0f638bef-bf97-4d33-b5b0-1be53a2c7492")
-	)
-	(wire
-		(pts
-			(xy 133.35 119.38) (xy 133.35 120.65)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "1117ebfb-16a3-4243-af49-a041f0d4821b")
 	)
 	(wire
 		(pts
@@ -4295,16 +4355,6 @@
 	)
 	(wire
 		(pts
-			(xy 133.35 111.76) (xy 133.35 119.38)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "3c292c34-fd4c-45b2-b93d-54eb7dae8653")
-	)
-	(wire
-		(pts
 			(xy 85.09 50.8) (xy 85.09 52.07)
 		)
 		(stroke
@@ -4435,13 +4485,13 @@
 	)
 	(wire
 		(pts
-			(xy 166.37 119.38) (xy 170.18 119.38)
+			(xy 104.14 113.03) (xy 104.14 130.81)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "69dc3423-d8f2-4eb4-bd2c-935c00597fac")
+		(uuid "69fb2cbe-777c-47a4-ad87-be1789dc9ac8")
 	)
 	(wire
 		(pts
@@ -4465,6 +4515,16 @@
 	)
 	(wire
 		(pts
+			(xy 115.57 156.21) (xy 118.11 156.21)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7db5b99a-caff-4c9b-81c0-7f66fc60db82")
+	)
+	(wire
+		(pts
 			(xy 58.42 29.21) (xy 127 29.21)
 		)
 		(stroke
@@ -4475,7 +4535,17 @@
 	)
 	(wire
 		(pts
-			(xy 166.37 129.54) (xy 165.1 129.54)
+			(xy 104.14 130.81) (xy 114.3 130.81)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "816d6421-99f7-4491-ad48-874ac505cc1b")
+	)
+	(wire
+		(pts
+			(xy 171.45 138.43) (xy 170.18 138.43)
 		)
 		(stroke
 			(width 0)
@@ -4505,7 +4575,7 @@
 	)
 	(wire
 		(pts
-			(xy 160.02 129.54) (xy 156.21 129.54)
+			(xy 165.1 138.43) (xy 161.29 138.43)
 		)
 		(stroke
 			(width 0)
@@ -4575,16 +4645,6 @@
 	)
 	(wire
 		(pts
-			(xy 146.05 129.54) (xy 148.59 129.54)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "9c106ccf-8bc1-46f2-9b9f-e37ed0ed05a3")
-	)
-	(wire
-		(pts
 			(xy 152.4 36.83) (xy 152.4 43.18)
 		)
 		(stroke
@@ -4612,16 +4672,6 @@
 			(type default)
 		)
 		(uuid "a3c0d1ae-84f1-4b4e-b429-4a8f35ddb263")
-	)
-	(wire
-		(pts
-			(xy 166.37 129.54) (xy 166.37 119.38)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "a41e62be-afe8-4cea-a6d7-17e31ea774e4")
 	)
 	(wire
 		(pts
@@ -4725,16 +4775,6 @@
 	)
 	(wire
 		(pts
-			(xy 132.08 161.29) (xy 132.08 157.48)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d37088a3-3bf4-4fa3-bf49-f267568d8e6c")
-	)
-	(wire
-		(pts
 			(xy 66.04 40.64) (xy 72.39 40.64)
 		)
 		(stroke
@@ -4742,6 +4782,16 @@
 			(type default)
 		)
 		(uuid "d5150216-a2dc-4fb8-b889-ddf37abd0dec")
+	)
+	(wire
+		(pts
+			(xy 114.3 130.81) (xy 118.11 130.81)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "dccd1729-bf2c-426a-a752-5e984764755a")
 	)
 	(wire
 		(pts
@@ -4835,7 +4885,7 @@
 	)
 	(wire
 		(pts
-			(xy 140.97 119.38) (xy 166.37 119.38)
+			(xy 114.3 123.19) (xy 114.3 113.03)
 		)
 		(stroke
 			(width 0)
@@ -4893,7 +4943,7 @@
 	)
 	(global_label "VOUT_3V3"
 		(shape input)
-		(at 133.35 111.76 90)
+		(at 104.14 113.03 90)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -4903,7 +4953,7 @@
 		)
 		(uuid "9679aa3e-88e8-4baf-ae2b-8809d22e4ac6")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 133.35 99.5824 90)
+			(at 104.14 100.8524 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4965,7 +5015,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 170.18 119.38 90)
+		(at 114.3 113.03 180)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -4976,7 +5026,7 @@
 		(fields_autoplaced yes)
 		(uuid "0b8ca2df-6103-413e-ba46-7efae2513274")
 		(property "Reference" "#PWR013"
-			(at 176.53 119.38 0)
+			(at 114.3 106.68 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4987,7 +5037,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 173.99 119.3799 90)
+			(at 114.2999 109.22 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4998,7 +5048,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 170.18 119.38 0)
+			(at 114.3 113.03 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5009,7 +5059,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 170.18 119.38 0)
+			(at 114.3 113.03 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5020,7 +5070,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 170.18 119.38 0)
+			(at 114.3 113.03 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5355,6 +5405,262 @@
 		)
 	)
 	(symbol
+		(lib_id "ESP32-C3_SUPERMINI_SMD:ESP32-C3_SUPERMINI_SMD")
+		(at 135.89 140.97 0)
+		(mirror y)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "279a34df-ca08-4a56-b261-8fcc2e132637")
+		(property "Reference" "U6"
+			(at 135.89 120.65 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "ESP32-C3_SUPERMINI_SMD"
+			(at 135.89 123.19 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "smd:MODULE_ESP32-C3_SUPERMINI"
+			(at 135.89 140.97 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+			)
+		)
+		(property "Datasheet" ""
+			(at 135.89 140.97 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Super tiny ESP32-C3 board"
+			(at 135.89 140.97 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+			)
+		)
+		(property "MF" "Espressif Systems"
+			(at 135.89 140.97 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+			)
+		)
+		(property "MAXIMUM_PACKAGE_HEIGHT" "4.2mm"
+			(at 135.89 140.97 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+			)
+		)
+		(property "Package" "None"
+			(at 135.89 140.97 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+			)
+		)
+		(property "Price" "None"
+			(at 135.89 140.97 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+			)
+		)
+		(property "Check_prices" "https://www.snapeda.com/parts/ESP32-C3%20SuperMini_SMD/Espressif+Systems/view-part/?ref=eda"
+			(at 135.89 140.97 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+			)
+		)
+		(property "STANDARD" "Manufacturer Recommendations"
+			(at 135.89 140.97 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+			)
+		)
+		(property "PARTREV" ""
+			(at 135.89 140.97 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+			)
+		)
+		(property "SnapEDA_Link" "https://www.snapeda.com/parts/ESP32-C3%20SuperMini_SMD/Espressif+Systems/view-part/?ref=snap"
+			(at 135.89 140.97 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+			)
+		)
+		(property "MP" "ESP32-C3 SuperMini_SMD"
+			(at 135.89 140.97 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+			)
+		)
+		(property "Availability" "Not in stock"
+			(at 135.89 140.97 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+			)
+		)
+		(property "MANUFACTURER" "Espressif"
+			(at 135.89 140.97 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+			)
+		)
+		(pin "0"
+			(uuid "e695129f-a7ad-44b5-aa0f-38804817ebf2")
+		)
+		(pin "4"
+			(uuid "6922be55-31a8-4006-beb5-599a8150bb27")
+		)
+		(pin "3.3"
+			(uuid "dea390cb-13a7-4d46-8f12-c4c37a98688b")
+		)
+		(pin "3"
+			(uuid "a3d2a2f4-52db-4337-a19e-dc3456b2969a")
+		)
+		(pin "2"
+			(uuid "08f26a76-c271-4f2e-8baa-a9efd8ade81c")
+		)
+		(pin "5"
+			(uuid "6969e05d-dc27-4af6-8f03-7c6bcc126ea1")
+		)
+		(pin "1"
+			(uuid "fa885b6e-8487-4e49-85be-4da006ae24b4")
+		)
+		(pin "G"
+			(uuid "2f1fda1b-bfaa-479e-a728-56f98bb218a3")
+		)
+		(pin "21"
+			(uuid "747a08a5-e7cc-4839-9e08-8da829be2716")
+		)
+		(pin "20"
+			(uuid "bfcecf8e-4044-499d-aad9-edf915a0af71")
+		)
+		(pin "10"
+			(uuid "4c56e07c-85cb-4419-8914-fa555e5b4da2")
+		)
+		(pin "9"
+			(uuid "2a28504b-4664-473e-afc1-fdeced417bf7")
+		)
+		(pin "8"
+			(uuid "f16aee94-f2e7-441b-aa18-2b10bb55262d")
+		)
+		(pin "7"
+			(uuid "cd0c7334-bf7c-4067-a342-6b65f27e9a58")
+		)
+		(pin "5V"
+			(uuid "d78afee2-f166-4c57-915d-ebeed969eeb5")
+		)
+		(pin "6"
+			(uuid "c039e671-205c-48b1-b262-45142f7486df")
+		)
+		(instances
+			(project "ember_flight_recorder"
+				(path "/d47a8d18-f726-41c5-b6f5-64829cbcbaae"
+					(reference "U6")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "FS8205A:FS8205A")
 		(at 58.42 60.96 0)
 		(unit 1)
@@ -5665,8 +5971,8 @@
 		)
 	)
 	(symbol
-		(lib_id "ESP32-C3-SuperMini:ESP32-C3-SuperMini")
-		(at 132.08 135.89 0)
+		(lib_id "power:GND")
+		(at 115.57 156.21 270)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -5675,9 +5981,9 @@
 		(in_pos_files yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "3f1b43c9-de3d-4fcb-ba7b-ddace23b7aef")
-		(property "Reference" "U1"
-			(at 134.366 130.81 0)
+		(uuid "44a6d387-dccc-4d8d-9389-a8f6964291cf")
+		(property "Reference" "#PWR03"
+			(at 109.22 156.21 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5687,19 +5993,19 @@
 				)
 			)
 		)
-		(property "Value" "ESP32-C3-SuperMini"
-			(at 134.2233 157.48 0)
+		(property "Value" "GND"
+			(at 111.76 156.2099 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
+				(justify right)
 			)
 		)
-		(property "Footprint" "ESP32-C3-SuperMini:ESP32-C3-SuperMini"
-			(at 132.08 135.89 0)
+		(property "Footprint" ""
+			(at 115.57 156.21 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5710,7 +6016,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 132.08 135.89 0)
+			(at 115.57 156.21 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5720,8 +6026,8 @@
 				)
 			)
 		)
-		(property "Description" ""
-			(at 132.08 135.89 0)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 115.57 156.21 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5730,81 +6036,14 @@
 					(size 1.27 1.27)
 				)
 			)
-		)
-		(property "Buy" "https://makerbazar.in/products/esp32-c3-supermini-iot-development-board?variant=48250998391024"
-			(at 132.08 135.89 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Buy_ALT" "https://www.amazon.in/DELLZO-ESP32-C3-Development-Bluetooth-Pre-Loaded/dp/B0G9RGBKDX?crid=3GXPQ4BNUKZXY&dib=eyJ2IjoiMSJ9.3sIXyPvrdac91DLWzGpUGL-fXJEEhjOKONiKk_wcCVSvbNqyOSa1Hg0MylzNC-sA8r0Cu9T0C_kaoDJ0bydslR2-QGjjzyvPwxjQUnZWvXYGBe0RHLA3faxwuxqLlHIw0oIbmc-YrubtWt4y4QUSNn55fUvWVqecoZyjixtUGMVBGIdz_UEVys0xsu-O9hL1fSaF7JBMClclFvA2W2PqVVlHmHoAO03S9NCbDGsoMg8.2aMkfk1oUqAnieAcGZTRyCSSgekjXvNToKVURfZ_XOg&dib_tag=se&keywords=esp32%2Bsuper%2Bmini%2Bc3&qid=1777961646&sprefix=esp32%2Bsuper%2Bmini%2Bc%2Caps%2C395&sr=8-3&th=1"
-			(at 132.08 135.89 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "11"
-			(uuid "3d2f52d6-9106-4088-ade1-36b3182932c8")
-		)
-		(pin "13"
-			(uuid "40397b96-5cc1-4237-b8f9-9c5d54f4d040")
-		)
-		(pin "6"
-			(uuid "3cfa3155-cae1-4309-abfb-51ed9b9dbf06")
-		)
-		(pin "15"
-			(uuid "51fbb195-9e78-48db-b28d-a045b2b5f619")
-		)
-		(pin "9"
-			(uuid "7d445a43-7148-4aeb-8245-02c4a30202e4")
-		)
-		(pin "10"
-			(uuid "3fd4b04c-bf8e-4d34-87cb-746ceb829669")
-		)
-		(pin "4"
-			(uuid "d8f75c6a-d437-4f05-8934-309ad34ad179")
-		)
-		(pin "12"
-			(uuid "0a43ba0b-3921-46a3-b633-4f054cd693be")
-		)
-		(pin "8"
-			(uuid "86276635-75b7-4950-b06b-1ad203052007")
-		)
-		(pin "7"
-			(uuid "7253394b-f7f8-448f-bb29-c416c7f2a8f1")
-		)
-		(pin "14"
-			(uuid "a94d81cd-697f-4432-a217-95c58ad9c022")
-		)
-		(pin "16"
-			(uuid "cf5f1f28-6bab-4871-8526-707374d99866")
-		)
-		(pin "5"
-			(uuid "5ae6990c-9cd1-4895-8e20-af2f3650e365")
-		)
-		(pin "2"
-			(uuid "26c080d2-73e4-4789-81e2-0aa445bd937b")
 		)
 		(pin "1"
-			(uuid "e8d12ffe-e07c-4502-b14f-b3b55c49a94b")
-		)
-		(pin "3"
-			(uuid "656a2e4f-612e-47bd-9a0a-6d12bca9e9ea")
+			(uuid "03b4938b-32bd-422b-bed1-92db88a9ce77")
 		)
 		(instances
 			(project "ember_flight_recorder"
 				(path "/d47a8d18-f726-41c5-b6f5-64829cbcbaae"
-					(reference "U1")
+					(reference "#PWR03")
 					(unit 1)
 				)
 			)
@@ -6184,7 +6423,7 @@
 	)
 	(symbol
 		(lib_id "Device:C")
-		(at 137.16 119.38 90)
+		(at 114.3 127 180)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -6192,10 +6431,9 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "84acddaf-642b-40b1-9d36-62d05fb7d913")
 		(property "Reference" "C6"
-			(at 137.16 111.76 90)
+			(at 108.712 126.492 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -6205,7 +6443,7 @@
 			)
 		)
 		(property "Value" "100nF"
-			(at 137.16 114.3 90)
+			(at 108.966 128.524 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -6215,7 +6453,7 @@
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder"
-			(at 140.97 118.4148 0)
+			(at 113.3348 123.19 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6226,7 +6464,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 137.16 119.38 0)
+			(at 114.3 127 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6237,7 +6475,7 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
-			(at 137.16 119.38 0)
+			(at 114.3 127 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6248,7 +6486,7 @@
 			)
 		)
 		(property "Buy" "https://robu.in/product/tcc1206m3l104j500ft-cctc-smt-ceramic-capacitors-1206-m3l-104j100nf%c2%b15-0-rated-voltage50v-thickness1-25mm-tape"
-			(at 137.16 119.38 0)
+			(at 114.3 127 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6851,7 +7089,7 @@
 	)
 	(symbol
 		(lib_id "Device:R_Small_US")
-		(at 162.56 129.54 90)
+		(at 167.64 138.43 90)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -6862,7 +7100,7 @@
 		(fields_autoplaced yes)
 		(uuid "df832255-984e-4936-9afa-f1e2bf18fc73")
 		(property "Reference" "R7"
-			(at 162.56 123.19 90)
+			(at 167.64 132.08 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -6872,7 +7110,7 @@
 			)
 		)
 		(property "Value" "100"
-			(at 162.56 125.73 90)
+			(at 167.64 134.62 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -6882,7 +7120,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
-			(at 162.56 129.54 0)
+			(at 167.64 138.43 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6893,7 +7131,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 162.56 129.54 0)
+			(at 167.64 138.43 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6904,7 +7142,7 @@
 			)
 		)
 		(property "Description" "Resistor, small US symbol"
-			(at 162.56 129.54 0)
+			(at 167.64 138.43 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6915,7 +7153,7 @@
 			)
 		)
 		(property "Buy" "https://robu.in/product/ac0805fr-7w100rl-yageo-res-thick-film-0805-100-ohm-1-0-25w1-4w-%c2%b1100ppm-c-pad-smd-t-r-automotive-aec-q200"
-			(at 162.56 129.54 0)
+			(at 167.64 138.43 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7020,7 +7258,7 @@
 	)
 	(symbol
 		(lib_id "Device:LED")
-		(at 152.4 129.54 180)
+		(at 157.48 138.43 180)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -7031,7 +7269,7 @@
 		(fields_autoplaced yes)
 		(uuid "e75280c6-d16d-4e78-8478-faf6854a6ef5")
 		(property "Reference" "D5"
-			(at 153.9875 121.92 0)
+			(at 159.0675 130.81 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -7041,7 +7279,7 @@
 			)
 		)
 		(property "Value" "LED"
-			(at 153.9875 124.46 0)
+			(at 159.0675 133.35 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -7051,7 +7289,7 @@
 			)
 		)
 		(property "Footprint" "LED_SMD:LED_1210_3225Metric_Pad1.42x2.65mm_HandSolder"
-			(at 152.4 129.54 0)
+			(at 157.48 138.43 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7062,7 +7300,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 152.4 129.54 0)
+			(at 157.48 138.43 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7073,7 +7311,7 @@
 			)
 		)
 		(property "Description" "Light emitting diode"
-			(at 152.4 129.54 0)
+			(at 157.48 138.43 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7084,7 +7322,7 @@
 			)
 		)
 		(property "Sim.Pins" "1=K 2=A"
-			(at 152.4 129.54 0)
+			(at 157.48 138.43 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7095,7 +7333,7 @@
 			)
 		)
 		(property "Buy" "https://robu.in/product/1210-surface-mount-led-red-50-pcs"
-			(at 152.4 129.54 0)
+			(at 157.48 138.43 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7115,84 +7353,6 @@
 			(project "ember_flight_recorder"
 				(path "/d47a8d18-f726-41c5-b6f5-64829cbcbaae"
 					(reference "D5")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 132.08 161.29 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "e7a2a708-a535-4230-87a0-d6c63009f3d4")
-		(property "Reference" "#PWR06"
-			(at 132.08 167.64 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 132.08 166.37 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 132.08 161.29 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 132.08 161.29 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 132.08 161.29 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "0097f303-98c7-4af7-a91f-f347171a675c")
-		)
-		(instances
-			(project "ember_flight_recorder"
-				(path "/d47a8d18-f726-41c5-b6f5-64829cbcbaae"
-					(reference "#PWR06")
 					(unit 1)
 				)
 			)
@@ -7488,6 +7648,85 @@
 			(project "ember_flight_recorder"
 				(path "/d47a8d18-f726-41c5-b6f5-64829cbcbaae"
 					(reference "U4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 171.45 138.43 90)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "fca3517e-82aa-4c88-b31c-37ff3de39e23")
+		(property "Reference" "#PWR02"
+			(at 177.8 138.43 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 175.26 138.4299 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" ""
+			(at 171.45 138.43 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 171.45 138.43 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 171.45 138.43 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "75d24294-6559-4a61-90ea-183f854d7d0d")
+		)
+		(instances
+			(project "ember_flight_recorder"
+				(path "/d47a8d18-f726-41c5-b6f5-64829cbcbaae"
+					(reference "#PWR02")
 					(unit 1)
 				)
 			)
