@@ -1,5 +1,6 @@
 models/bak/*
 kicad/ember-backups/*
+kicad/ember_flight_recorder/.history
 *-bak
 *.bak
 *.tmp

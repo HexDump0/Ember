@@ -196,7 +196,7 @@
       "track_widths": [
         0.0,
         0.4,
-        2.0
+        1.0
       ],
       "tuning_pattern_settings": {
         "diff_pair_defaults": {
@@ -761,6 +761,14 @@
       "version": 1
     },
     "net_format_name": "",
+    "ngspice": {
+      "fix_include_paths": true,
+      "meta": {
+        "version": 0
+      },
+      "model_mode": 4,
+      "workbook_filename": ""
+    },
     "page_layout_descr_file": "",
     "plot_directory": "",
     "reuse_designators": true,
@@ -780,7 +788,7 @@
         "uuid": "d47a8d18-f726-41c5-b6f5-64829cbcbaae"
       }
     ],
-    "used_designators": "",
+    "used_designators": "R7,D5,#PWR2,#PWR4,SW1",
     "variants": []
   },
   "sheets": [

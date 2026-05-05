@@ -2942,6 +2942,196 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "Switch:SW_SPDT"
+			(pin_names
+				(offset 0)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "SW"
+				(at 0 5.08 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "SW_SPDT"
+				(at 0 -5.08 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 -7.62 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Switch, single pole double throw"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "switch single-pole double-throw spdt ON-ON"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "SW_SPDT_0_1"
+				(circle
+					(center -2.032 0)
+					(radius 0.4572)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.651 0.254) (xy 1.651 2.286)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 2.032 2.54)
+					(radius 0.4572)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 2.032 -2.54)
+					(radius 0.4572)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "SW_SPDT_1_1"
+				(rectangle
+					(start -3.175 3.81)
+					(end 3.175 -3.81)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(pin passive line
+					(at 5.08 2.54 180)
+					(length 2.54)
+					(name "A"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -5.08 0 0)
+					(length 2.54)
+					(name "B"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 5.08 -2.54 180)
+					(length 2.54)
+					(name "C"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "Transistor_FET:AO3401A"
 			(pin_names
 				(hide yes)
@@ -3350,6 +3540,193 @@
 				)
 			)
 			(symbol "GND_1_1"
+				(pin power_in line
+					(at 0 0 270)
+					(length 0)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "power:GNDPWR"
+			(power global)
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "#PWR"
+				(at 0 -5.08 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "GNDPWR"
+				(at 0 -3.302 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 -1.27 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 -1.27 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Power symbol creates a global label with name \"GNDPWR\" , global ground"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "global ground"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "GNDPWR_0_1"
+				(polyline
+					(pts
+						(xy -1.016 -1.27) (xy -1.27 -2.032) (xy -1.27 -2.032)
+					)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -0.508 -1.27) (xy -0.762 -2.032) (xy -0.762 -2.032)
+					)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 -1.27) (xy 0 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 -1.27) (xy -0.254 -2.032) (xy -0.254 -2.032)
+					)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.508 -1.27) (xy 0.254 -2.032) (xy 0.254 -2.032)
+					)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.016 -1.27) (xy -1.016 -1.27) (xy -1.016 -1.27)
+					)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.016 -1.27) (xy 0.762 -2.032) (xy 0.762 -2.032) (xy 0.762 -2.032)
+					)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "GNDPWR_1_1"
 				(pin power_in line
 					(at 0 0 270)
 					(length 0)
@@ -3984,6 +4361,12 @@
 		(uuid "3ad14263-4077-49a0-b815-f6c3d0423f8c")
 	)
 	(junction
+		(at 31.75 55.88)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "43b635e5-0d1a-4a75-8a4d-de9dbde21a43")
+	)
+	(junction
 		(at 66.04 45.72)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -4020,12 +4403,6 @@
 		(uuid "7dac33a3-6f26-4924-af87-4b55d9c1f863")
 	)
 	(junction
-		(at 25.4 55.88)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "96d8118e-dc1f-4bad-bf9c-46d2e1be058c")
-	)
-	(junction
 		(at 66.04 40.64)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -4050,12 +4427,6 @@
 		(uuid "b1859e4e-80c5-4741-8cf1-8ece53f7b9b1")
 	)
 	(junction
-		(at 58.42 55.88)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "b2261551-173a-4073-b8dc-da49a3c37c26")
-	)
-	(junction
 		(at 165.1 43.18)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -4074,10 +4445,26 @@
 		(uuid "c8d92009-040b-4393-932a-1a0781559fed")
 	)
 	(junction
+		(at 58.42 58.42)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "e3fc5147-6554-443b-ad9c-f458248b5f90")
+	)
+	(junction
+		(at 111.76 161.29)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "f4ca3030-43c6-4d3d-8fb9-5dc57510bbb7")
+	)
+	(junction
 		(at 53.34 29.21)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "fdcb488b-4609-49c3-b9db-b346feb26c03")
+	)
+	(no_connect
+		(at 153.67 138.43)
+		(uuid "22059f6c-f9ee-4e42-a736-dd2fb6999cfb")
 	)
 	(no_connect
 		(at 118.11 146.05)
@@ -4090,10 +4477,6 @@
 	(no_connect
 		(at 66.04 135.89)
 		(uuid "59093707-b287-4f43-a744-688aebfd4b3f")
-	)
-	(no_connect
-		(at 118.11 143.51)
-		(uuid "5e055be8-ed94-4b5c-be04-f563f4cdc256")
 	)
 	(no_connect
 		(at 58.42 66.04)
@@ -4114,6 +4497,10 @@
 	(no_connect
 		(at 66.04 133.35)
 		(uuid "ba03cab4-069f-4a05-8923-4f405104c807")
+	)
+	(no_connect
+		(at 53.34 53.34)
+		(uuid "bb95ac85-d641-47e6-8e30-9e921dd6612e")
 	)
 	(no_connect
 		(at 118.11 148.59)
@@ -4165,6 +4552,16 @@
 	)
 	(wire
 		(pts
+			(xy 111.76 161.29) (xy 111.76 160.02)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "04847222-d1d9-44ff-b56e-30a3152f3c0e")
+	)
+	(wire
+		(pts
 			(xy 165.1 29.21) (xy 165.1 33.02)
 		)
 		(stroke
@@ -4172,6 +4569,16 @@
 			(type default)
 		)
 		(uuid "0ad323de-1236-41e8-8c36-624c808fd32f")
+	)
+	(wire
+		(pts
+			(xy 118.11 156.21) (xy 116.84 156.21)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0c6c72ba-8c0b-413b-91f0-1ea10f464651")
 	)
 	(wire
 		(pts
@@ -4205,7 +4612,7 @@
 	)
 	(wire
 		(pts
-			(xy 39.37 55.88) (xy 58.42 55.88)
+			(xy 39.37 55.88) (xy 43.18 55.88)
 		)
 		(stroke
 			(width 0)
@@ -4395,6 +4802,16 @@
 	)
 	(wire
 		(pts
+			(xy 58.42 58.42) (xy 58.42 60.96)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4d406bfd-b2ee-45e2-b284-8cd6aa413b3c")
+	)
+	(wire
+		(pts
 			(xy 58.42 40.64) (xy 58.42 38.1)
 		)
 		(stroke
@@ -4412,6 +4829,16 @@
 			(type default)
 		)
 		(uuid "5428d736-9e1e-45d5-ab00-1fb7761f10a5")
+	)
+	(wire
+		(pts
+			(xy 116.84 156.21) (xy 116.84 161.29)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5963c5e4-3dc0-41e4-affd-0eb3743ed8f2")
 	)
 	(wire
 		(pts
@@ -4475,7 +4902,7 @@
 	)
 	(wire
 		(pts
-			(xy 58.42 55.88) (xy 58.42 45.72)
+			(xy 58.42 45.72) (xy 58.42 58.42)
 		)
 		(stroke
 			(width 0)
@@ -4515,13 +4942,13 @@
 	)
 	(wire
 		(pts
-			(xy 115.57 156.21) (xy 118.11 156.21)
+			(xy 116.84 161.29) (xy 111.76 161.29)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "7db5b99a-caff-4c9b-81c0-7f66fc60db82")
+		(uuid "7d983414-040b-4a01-ad4a-af48cb11bef2")
 	)
 	(wire
 		(pts
@@ -4545,16 +4972,6 @@
 	)
 	(wire
 		(pts
-			(xy 171.45 138.43) (xy 170.18 138.43)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "82d274e3-cf41-4f15-a282-18cb3f7d901b")
-	)
-	(wire
-		(pts
 			(xy 25.4 44.45) (xy 25.4 55.88)
 		)
 		(stroke
@@ -4572,16 +4989,6 @@
 			(type default)
 		)
 		(uuid "85309f42-06a9-4cee-8fcb-d80a00c78411")
-	)
-	(wire
-		(pts
-			(xy 165.1 138.43) (xy 161.29 138.43)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "89099fc4-bec3-41f4-abab-f149ed8f65e7")
 	)
 	(wire
 		(pts
@@ -4615,7 +5022,7 @@
 	)
 	(wire
 		(pts
-			(xy 25.4 55.88) (xy 39.37 55.88)
+			(xy 25.4 55.88) (xy 31.75 55.88)
 		)
 		(stroke
 			(width 0)
@@ -4685,6 +5092,16 @@
 	)
 	(wire
 		(pts
+			(xy 111.76 154.94) (xy 111.76 151.13)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ab93dfa9-64e7-4370-b590-8b0f36a83123")
+	)
+	(wire
+		(pts
 			(xy 152.4 53.34) (xy 152.4 68.58)
 		)
 		(stroke
@@ -4692,6 +5109,16 @@
 			(type default)
 		)
 		(uuid "b0d74006-cf50-426f-ad3d-957452cd5c23")
+	)
+	(wire
+		(pts
+			(xy 53.34 58.42) (xy 58.42 58.42)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b0e18233-78b3-42a7-8875-8b98f42e90b1")
 	)
 	(wire
 		(pts
@@ -4725,16 +5152,6 @@
 	)
 	(wire
 		(pts
-			(xy 58.42 60.96) (xy 58.42 55.88)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "c2cb40da-5c12-482f-b161-259a0efaee0a")
-	)
-	(wire
-		(pts
 			(xy 58.42 40.64) (xy 66.04 40.64)
 		)
 		(stroke
@@ -4742,6 +5159,16 @@
 			(type default)
 		)
 		(uuid "c8371afd-7e27-4fb2-aa90-3bbba7443060")
+	)
+	(wire
+		(pts
+			(xy 31.75 55.88) (xy 39.37 55.88)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "cbfbaa24-8428-42f3-979e-9dc77a2eb374")
 	)
 	(wire
 		(pts
@@ -4862,6 +5289,16 @@
 			(type default)
 		)
 		(uuid "f39e8420-6d0b-4094-8736-de005c536d7d")
+	)
+	(wire
+		(pts
+			(xy 111.76 143.51) (xy 118.11 143.51)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f6655569-6fed-4a91-8e50-6df59a4e45a2")
 	)
 	(wire
 		(pts
@@ -5971,85 +6408,6 @@
 		)
 	)
 	(symbol
-		(lib_id "power:GND")
-		(at 115.57 156.21 270)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "44a6d387-dccc-4d8d-9389-a8f6964291cf")
-		(property "Reference" "#PWR03"
-			(at 109.22 156.21 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 111.76 156.2099 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" ""
-			(at 115.57 156.21 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 115.57 156.21 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 115.57 156.21 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "03b4938b-32bd-422b-bed1-92db88a9ce77")
-		)
-		(instances
-			(project "ember_flight_recorder"
-				(path "/d47a8d18-f726-41c5-b6f5-64829cbcbaae"
-					(reference "#PWR03")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:PWR_FLAG")
 		(at 53.34 29.21 0)
 		(unit 1)
@@ -6122,6 +6480,86 @@
 			(project "ember_flight_recorder"
 				(path "/d47a8d18-f726-41c5-b6f5-64829cbcbaae"
 					(reference "#FLG01")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 111.76 161.29 0)
+		(mirror y)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "56d2f288-eea7-4963-a52b-c0673c7e7240")
+		(property "Reference" "#PWR02"
+			(at 111.76 167.64 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 111.7599 165.1 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" ""
+			(at 111.76 161.29 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 111.76 161.29 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 111.76 161.29 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "df6de031-8f43-457d-8873-c622b8adc85e")
+		)
+		(instances
+			(project "ember_flight_recorder"
+				(path "/d47a8d18-f726-41c5-b6f5-64829cbcbaae"
+					(reference "#PWR02")
 					(unit 1)
 				)
 			)
@@ -6325,6 +6763,84 @@
 		)
 	)
 	(symbol
+		(lib_id "power:GNDPWR")
+		(at 31.75 55.88 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "7c919a40-74cc-4210-8a1a-d1e857d44775")
+		(property "Reference" "#PWR04"
+			(at 31.75 60.96 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GNDPWR"
+			(at 31.623 59.69 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 31.75 57.15 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 31.75 57.15 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GNDPWR\" , global ground"
+			(at 31.75 55.88 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "62a22211-6348-43d3-99d6-c3ea49ea1c00")
+		)
+		(instances
+			(project "ember_flight_recorder"
+				(path "/d47a8d18-f726-41c5-b6f5-64829cbcbaae"
+					(reference "#PWR04")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Transistor_FET:AO3401A")
 		(at 39.37 31.75 90)
 		(unit 1)
@@ -6506,6 +7022,98 @@
 			(project "ember_flight_recorder"
 				(path "/d47a8d18-f726-41c5-b6f5-64829cbcbaae"
 					(reference "C6")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R_Small_US")
+		(at 111.76 157.48 0)
+		(mirror y)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "97bb76c6-1b8b-4ca6-8578-f87bd398b6b2")
+		(property "Reference" "R7"
+			(at 105.41 157.48 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "100"
+			(at 107.95 157.48 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
+			(at 111.76 157.48 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 111.76 157.48 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Resistor, small US symbol"
+			(at 111.76 157.48 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Buy" "https://robu.in/product/ac0805fr-7w100rl-yageo-res-thick-film-0805-100-ohm-1-0-25w1-4w-%c2%b1100ppm-c-pad-smd-t-r-automotive-aec-q200"
+			(at 111.76 157.48 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "b778f896-c4fc-449c-a1c4-4b9f8b65075f")
+		)
+		(pin "1"
+			(uuid "dd5bb205-3ddf-4a1b-807b-a43683aa72db")
+		)
+		(instances
+			(project "ember_flight_recorder"
+				(path "/d47a8d18-f726-41c5-b6f5-64829cbcbaae"
+					(reference "R7")
 					(unit 1)
 				)
 			)
@@ -6839,6 +7447,109 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:LED")
+		(at 111.76 147.32 270)
+		(mirror x)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "b5723daa-d2dd-443a-a10d-6aee493b6609")
+		(property "Reference" "D5"
+			(at 104.14 148.9075 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "LED"
+			(at 106.68 148.9075 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "LED_SMD:LED_1210_3225Metric_Pad1.42x2.65mm_HandSolder"
+			(at 111.76 147.32 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 111.76 147.32 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Light emitting diode"
+			(at 111.76 147.32 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 111.76 147.32 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Buy" "https://robu.in/product/1210-surface-mount-led-red-50-pcs"
+			(at 111.76 147.32 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "92098246-28b3-4f78-9a11-d77c3801fffa")
+		)
+		(pin "1"
+			(uuid "782aabb9-a18c-4255-89b8-6ad1f2fbd2a0")
+		)
+		(instances
+			(project "ember_flight_recorder"
+				(path "/d47a8d18-f726-41c5-b6f5-64829cbcbaae"
+					(reference "D5")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:C")
 		(at 137.16 39.37 0)
 		(unit 1)
@@ -6932,6 +7643,100 @@
 		)
 	)
 	(symbol
+		(lib_id "Switch:SW_SPDT")
+		(at 48.26 55.88 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "c2ec1cbb-38fb-4754-8b5f-3e936c6440ae")
+		(property "Reference" "SW1"
+			(at 48.26 46.99 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "SW_SPDT"
+			(at 48.26 49.53 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Button_Switch_THT:SW_Slide-03_Wuerth-WS-SLTV_10x2.5x6.4_P2.54mm"
+			(at 48.26 55.88 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 48.26 63.5 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Switch, single pole double throw"
+			(at 48.26 55.88 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Buy" "https://robu.in/product/4mm-spdt-1p2t-slide-switch-pack-of-10"
+			(at 48.26 55.88 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "1047ece0-d4bd-41a1-b9ff-0ce59627f7c0")
+		)
+		(pin "1"
+			(uuid "de7f38ba-d75b-45d6-962b-aebbab3a6218")
+		)
+		(pin "3"
+			(uuid "2f8e93ac-30be-4ae9-90fb-082c15000b7b")
+		)
+		(instances
+			(project "ember_flight_recorder"
+				(path "/d47a8d18-f726-41c5-b6f5-64829cbcbaae"
+					(reference "SW1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:GND")
 		(at 67.31 163.83 90)
 		(unit 1)
@@ -7011,175 +7816,6 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 25.4 55.88 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "cf86f89e-4bbd-4a05-a71a-615512174877")
-		(property "Reference" "#PWR07"
-			(at 25.4 62.23 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 25.4 60.96 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 25.4 55.88 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 25.4 55.88 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 25.4 55.88 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "62701891-2fdc-4140-ab37-18fbfc4f4921")
-		)
-		(instances
-			(project "ember_flight_recorder"
-				(path "/d47a8d18-f726-41c5-b6f5-64829cbcbaae"
-					(reference "#PWR07")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R_Small_US")
-		(at 167.64 138.43 90)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "df832255-984e-4936-9afa-f1e2bf18fc73")
-		(property "Reference" "R7"
-			(at 167.64 132.08 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "100"
-			(at 167.64 134.62 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
-			(at 167.64 138.43 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 167.64 138.43 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Resistor, small US symbol"
-			(at 167.64 138.43 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Buy" "https://robu.in/product/ac0805fr-7w100rl-yageo-res-thick-film-0805-100-ohm-1-0-25w1-4w-%c2%b1100ppm-c-pad-smd-t-r-automotive-aec-q200"
-			(at 167.64 138.43 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "2"
-			(uuid "0c6c36b5-9b51-4e58-a2b0-5d53cd7d0fd2")
-		)
-		(pin "1"
-			(uuid "75a54b9c-604c-4263-acc3-0292b862f379")
-		)
-		(instances
-			(project "ember_flight_recorder"
-				(path "/d47a8d18-f726-41c5-b6f5-64829cbcbaae"
-					(reference "R7")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
 		(at 181.61 43.18 0)
 		(unit 1)
 		(body_style 1)
@@ -7251,108 +7887,6 @@
 			(project "ember_flight_recorder"
 				(path "/d47a8d18-f726-41c5-b6f5-64829cbcbaae"
 					(reference "#PWR01")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:LED")
-		(at 157.48 138.43 180)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "e75280c6-d16d-4e78-8478-faf6854a6ef5")
-		(property "Reference" "D5"
-			(at 159.0675 130.81 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "LED"
-			(at 159.0675 133.35 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "LED_SMD:LED_1210_3225Metric_Pad1.42x2.65mm_HandSolder"
-			(at 157.48 138.43 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 157.48 138.43 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Light emitting diode"
-			(at 157.48 138.43 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Sim.Pins" "1=K 2=A"
-			(at 157.48 138.43 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Buy" "https://robu.in/product/1210-surface-mount-led-red-50-pcs"
-			(at 157.48 138.43 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "2"
-			(uuid "0fbdcaec-c6fe-4451-8fcb-f98b8dcae436")
-		)
-		(pin "1"
-			(uuid "98282c45-28be-4d2d-a679-6c8382b9a0e4")
-		)
-		(instances
-			(project "ember_flight_recorder"
-				(path "/d47a8d18-f726-41c5-b6f5-64829cbcbaae"
-					(reference "D5")
 					(unit 1)
 				)
 			)
@@ -7648,85 +8182,6 @@
 			(project "ember_flight_recorder"
 				(path "/d47a8d18-f726-41c5-b6f5-64829cbcbaae"
 					(reference "U4")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 171.45 138.43 90)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "fca3517e-82aa-4c88-b31c-37ff3de39e23")
-		(property "Reference" "#PWR02"
-			(at 177.8 138.43 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 175.26 138.4299 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" ""
-			(at 171.45 138.43 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 171.45 138.43 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 171.45 138.43 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "75d24294-6559-4a61-90ea-183f854d7d0d")
-		)
-		(instances
-			(project "ember_flight_recorder"
-				(path "/d47a8d18-f726-41c5-b6f5-64829cbcbaae"
-					(reference "#PWR02")
 					(unit 1)
 				)
 			)
