@@ -21,3 +21,7 @@ fabrication/
 Thumbs.db
 fp-info-cache
 kicad/.history
+
+
+kicad/ember_flight_recorder/ember_flight_recorder-backups/*
+kicad/ember_launch_controller/ember_launch_controller-backups/*
