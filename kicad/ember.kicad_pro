@@ -274,6 +274,10 @@
         "Power"
       ],
       [
+        "power_pin_not_driven|393700|368300|00b65e29-2e7e-4aee-ba8e-cfa84be45e88|00000000-0000-0000-0000-000000000000|/d47a8d18-f726-41c5-b6f5-64829cbcbaae/d295ae1c-f7fd-46d0-a1ce-3bd67ab4f136|/d47a8d18-f726-41c5-b6f5-64829cbcbaae/d295ae1c-f7fd-46d0-a1ce-3bd67ab4f136|",
+        "Reverse polarity"
+      ],
+      [
         "power_pin_not_driven|546100|292100|1afad00f-01e0-4b23-b294-39ee00ee4ed8|00000000-0000-0000-0000-000000000000|/d47a8d18-f726-41c5-b6f5-64829cbcbaae/705ac1df-21a1-4c3b-833d-7e3445e72cf5|/d47a8d18-f726-41c5-b6f5-64829cbcbaae/705ac1df-21a1-4c3b-833d-7e3445e72cf5|",
         "Power"
       ],
@@ -284,6 +288,10 @@
       [
         "power_pin_not_driven|571500|355600|2fe18243-f2e9-4b05-a2d7-4e988480ea1b|00000000-0000-0000-0000-000000000000|/d47a8d18-f726-41c5-b6f5-64829cbcbaae/705ac1df-21a1-4c3b-833d-7e3445e72cf5|/d47a8d18-f726-41c5-b6f5-64829cbcbaae/705ac1df-21a1-4c3b-833d-7e3445e72cf5|",
         ""
+      ],
+      [
+        "power_pin_not_driven|723900|406400|a50188b2-a01b-47bf-8135-b8b0333cd993|00000000-0000-0000-0000-000000000000|/d47a8d18-f726-41c5-b6f5-64829cbcbaae/d295ae1c-f7fd-46d0-a1ce-3bd67ab4f136|/d47a8d18-f726-41c5-b6f5-64829cbcbaae/d295ae1c-f7fd-46d0-a1ce-3bd67ab4f136|",
+        "idk why this happens"
       ]
     ],
     "meta": {
@@ -769,7 +777,7 @@
         "uuid": "d47a8d18-f726-41c5-b6f5-64829cbcbaae"
       }
     ],
-    "used_designators": "",
+    "used_designators": "#FLG1,R7,D5,C6,#PWR8-13,Q4,U4-5",
     "variants": []
   },
   "sheets": [
