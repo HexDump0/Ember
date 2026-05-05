@@ -34,3 +34,11 @@ Top & Bottom layers -> 4
 3. Launch lugs (2)
 4. Engine block
 5. Centering rings (2)
+
+
+# TODO
+* Rocket design
+* CAD Models
+* Launch controller
+* Flight recorder
+* Fin jig, launch pad

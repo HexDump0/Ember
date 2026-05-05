@@ -1,4 +1,6 @@
 (fp_lib_table
-  (version 7)
-  (lib (name "symbols")(type "KiCad")(uri "${KIPRJMOD}/symbols.pretty")(options "")(descr ""))
+	(version 7)
+	(lib (name "symbols") (type "KiCad") (uri "${KIPRJMOD}/symbols.pretty") (options "") (descr ""))
+	(lib (name "ESP32-C3-SuperMini") (type "KiCad") (uri "${KIPRJMOD}/external/KiCad_ESP32-C3-SuperMini/ESP32-C3-SuperMini.pretty") (options "") (descr ""))
+	(lib (name "FS8205A") (type "KiCad") (uri "${KIPRJMOD}/external/FS8205A/footprints.pretty") (options "") (descr ""))
 )
