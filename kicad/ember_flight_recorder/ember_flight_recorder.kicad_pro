@@ -131,7 +131,7 @@
       "rules": {
         "max_error": 0.02,
         "min_clearance": 0.2,
-        "min_connection": 0.3,
+        "min_connection": 0.2,
         "min_copper_edge_clearance": 0.3,
         "min_groove_width": 0.0,
         "min_hole_clearance": 0.25,
@@ -228,6 +228,10 @@
         {
           "diameter": 0.0,
           "drill": 0.0
+        },
+        {
+          "diameter": 0.8,
+          "drill": 0.3
         },
         {
           "diameter": 0.9,
@@ -788,7 +792,7 @@
         "uuid": "d47a8d18-f726-41c5-b6f5-64829cbcbaae"
       }
     ],
-    "used_designators": "R7,D5,#PWR2,#PWR4,SW1",
+    "used_designators": "",
     "variants": []
   },
   "sheets": [
