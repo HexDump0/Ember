@@ -1,0 +1,23 @@
+%TF.GenerationSoftware,KiCad,Pcbnew,10.0.1*%
+%TF.CreationDate,2026-05-06T11:43:49+05:30*%
+%TF.ProjectId,ember_launch_controller,656d6265-725f-46c6-9175-6e63685f636f,rev?*%
+%TF.SameCoordinates,Original*%
+%TF.FileFunction,Profile,NP*%
+%FSLAX46Y46*%
+G04 Gerber Fmt 4.6, Leading zero omitted, Abs format (unit mm)*
+G04 Created by KiCad (PCBNEW 10.0.1) date 2026-05-06 11:43:49*
+%MOMM*%
+%LPD*%
+G01*
+G04 APERTURE LIST*
+%TA.AperFunction,Profile*%
+%ADD10C,0.050000*%
+%TD*%
+G04 APERTURE END LIST*
+D10*
+X112900000Y-75000000D02*
+X187900000Y-75000000D01*
+X187900000Y-127500000D01*
+X112900000Y-127500000D01*
+X112900000Y-75000000D01*
+M02*
