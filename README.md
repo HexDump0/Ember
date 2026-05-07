@@ -41,4 +41,5 @@ Top & Bottom layers -> 4
 * CAD Models
 * Launch controller
 * Flight recorder
+* Firmware
 * Fin jig, launch pad
