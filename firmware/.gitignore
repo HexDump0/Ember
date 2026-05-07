@@ -1,5 +1,6 @@
 # ESP-IDF build artefacts
 build/
+build-qemu/
 sdkconfig
 sdkconfig.old
 

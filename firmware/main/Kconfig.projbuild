@@ -1,0 +1,10 @@
+menu "Ember"
+
+config EMBER_FAKE_SENSORS
+    bool "Use synthetic sensor data instead of MPU6050/BMP280"
+    default n
+    help
+        If enabled sensors_read() will return time varying synthetic
+        data instead of a using the real sensors. Made for testing firmware in QEMU.
+
+endmenu
