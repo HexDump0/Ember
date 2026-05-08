@@ -9,9 +9,18 @@ idf_component_register(
         "main.c"
         "${SENSORS_SRC}"
         "logger.c"
+        "wifi_ap.c"
+        "http_server.c"
     INCLUDE_DIRS
         "."
     REQUIRES
         esp_driver_gpio
         esp_timer
+        esp_event
+        esp_netif
+        esp_wifi
+        esp_http_server
+        nvs_flash
+    EMBED_FILES
+        "web/index.html"
 )

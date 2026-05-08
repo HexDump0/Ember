@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ember</title>
+<style>
+  :root { color-scheme: dark; }
+  body {
+    margin: 0;
+    font: 15px/1.4 system-ui, -apple-system, sans-serif;
+    background: #111; color: #eee;
+    padding: 1rem;
+  }
+  h1 { margin: 0 0 .25rem; font-size: 1.2rem; letter-spacing: .04em; }
+  .sub { color: #888; margin-bottom: 1rem; }
+  .grid { display: grid; gap: .5rem 1rem;
+          grid-template-columns: max-content auto; max-width: 28rem; }
+  .grid > div:nth-child(odd) { color: #888; }
+  .grid > div:nth-child(even) { font-variant-numeric: tabular-nums; }
+  .err { color: #f55; }
+  hr { border: 0; border-top: 1px solid #333; margin: 1rem 0; }
+  small { color: #666; }
+</style>
+</head>
+<body>
+<h1>EMBER</h1>
+<div class="sub">flight recorder</div>
+
+<div id="err" class="err"></div>
+
+<section>
+  <h2 style="font-size:1rem;color:#888;margin:.25rem 0;">Recorder</h2>
+  <div class="grid">
+    <div>uptime</div>      <div id="uptime">—</div>
+    <div>boot #</div>      <div id="boot">—</div>
+    <div>current log</div> <div id="file">—</div>
+    <div>samples</div>     <div id="samples">—</div>
+    <div>flash used</div>  <div id="fs">—</div>
+  </div>
+</section>
+
+<hr>
+
+<section>
+  <h2 style="font-size:1rem;color:#888;margin:.25rem 0;">Latest sample</h2>
+  <div class="grid">
+    <div>t (ms)</div>     <div id="t">—</div>
+    <div>accel raw</div>  <div id="accel">—</div>
+    <div>gyro raw</div>   <div id="gyro">—</div>
+    <div>pressure</div>   <div id="press">—</div>
+    <div>temp</div>       <div id="temp">—</div>
+  </div>
+</section>
+
+<hr>
+<small>Refresh every 1 s.</small>
+
+<script>
+const $ = (id) => document.getElementById(id);
+
+function fmtUptime(ms) {
+  const s = Math.floor(ms / 1000);
+  const h = Math.floor(s / 3600);
+  const m = Math.floor((s % 3600) / 60);
+  const r = s % 60;
+  return `${h}h ${String(m).padStart(2,"0")}m ${String(r).padStart(2,"0")}s`;
+}
+
+function fmtBytes(b) {
+  if (b > 1024*1024) return (b/1024/1024).toFixed(2) + " MiB";
+  if (b > 1024) return (b/1024).toFixed(1) + " KiB";
+  return b + " B";
+}
+
+async function tick() {
+  try {
+    const r = await fetch("/api/status", { cache: "no-store" });
+    if (!r.ok) throw new Error("http " + r.status);
+    const j = await r.json();
+    $("err").textContent = "";
+    $("uptime").textContent  = fmtUptime(j.uptime_ms);
+    $("boot").textContent    = j.boot_count;
+    $("file").textContent    = j.current_file || "—";
+    $("samples").textContent = `${j.samples_written} (drops ${j.samples_dropped})`;
+    $("fs").textContent      = `${fmtBytes(j.fs_used)} / ${fmtBytes(j.fs_total)}`;
+
+    if (j.sample) {
+      const s = j.sample;
+      $("t").textContent     = s.t_ms;
+      $("accel").textContent = `${s.ax}, ${s.ay}, ${s.az}`;
+      $("gyro").textContent  = `${s.gx}, ${s.gy}, ${s.gz}`;
+      $("press").textContent = `${(s.pressure_pa/100).toFixed(1)} hPa`;
+      $("temp").textContent  = `${(s.temp_c100/100).toFixed(2)} °C`;
+    }
+  } catch (e) {
+    $("err").textContent = "status unavailable: " + e.message;
+  }
+}
+
+tick();
+setInterval(tick, 1000);
+</script>
+</body>
+</html>

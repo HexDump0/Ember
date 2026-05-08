@@ -4,3 +4,4 @@ dependencies:
   esp-idf-lib/i2cdev: "*"
   esp-idf-lib/mpu6050: "*"
   esp-idf-lib/bmp280: "*"
+  joltwallet/littlefs: "*"
