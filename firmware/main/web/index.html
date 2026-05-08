@@ -11,26 +11,59 @@
     font: 15px/1.4 system-ui, -apple-system, sans-serif;
     background: #111; color: #eee;
     padding: 1rem;
+    max-width: 56rem;
   }
   h1 { margin: 0 0 .25rem; font-size: 1.2rem; letter-spacing: .04em; }
+  h2 { font-size: 1rem; color: #888; margin: .25rem 0; font-weight: 600; }
   .sub { color: #888; margin-bottom: 1rem; }
-  .grid { display: grid; gap: .5rem 1rem;
+  .grid { display: grid; gap: .35rem 1rem;
           grid-template-columns: max-content auto; max-width: 28rem; }
   .grid > div:nth-child(odd) { color: #888; }
   .grid > div:nth-child(even) { font-variant-numeric: tabular-nums; }
-  .err { color: #f55; }
+  .err { color: #f55; min-height: 1.4em; }
   hr { border: 0; border-top: 1px solid #333; margin: 1rem 0; }
   small { color: #666; }
+  .ws { color: #888; font-size: .85em; }
+  .ws.up { color: #6c6; }
+  .ws.down { color: #f55; }
+  canvas { background: #0b0b0b; border: 1px solid #222; display: block;
+           width: 100%; max-width: 52rem; height: 9rem; margin-bottom: .25rem; }
+  .legend { color: #888; font-size: .85em; margin-bottom: .5rem; }
+  .legend span { display: inline-block; padding: 0 .6em 0 1.2em;
+                 position: relative; }
+  .legend span::before { content: ""; position: absolute; left: 0; top: .35em;
+                         width: .9em; height: .15em; background: currentColor; }
+  .legend .x { color: #f66; } .legend .y { color: #6c6; } .legend .z { color: #6cf; }
+  .legend .alt { color: #fc6; }
+  table { border-collapse: collapse; width: 100%; max-width: 36rem; }
+  th, td { text-align: left; padding: .35rem .6rem;
+           border-bottom: 1px solid #222; font-variant-numeric: tabular-nums; }
+  th { color: #888; font-weight: 600; }
+  td.size { text-align: right; }
+  td .act { display: inline-flex; gap: .35rem; }
+  button {
+    background: #222; color: #ddd; border: 1px solid #333;
+    padding: .25rem .65rem; border-radius: .25rem; cursor: pointer;
+    font: inherit;
+  }
+  button:hover:not(:disabled) { background: #2a2a2a; border-color: #555; }
+  button:disabled { opacity: .35; cursor: not-allowed; }
+  button.danger { color: #f99; }
+  button.danger:hover:not(:disabled) { color: #fff; background: #722; border-color: #944; }
+  .pill { background:#222; border:1px solid #333; border-radius:1em;
+          padding:.05em .55em; font-size:.8em; color:#888;
+          margin-left:.4em; vertical-align: middle; }
+  .pill.active { color: #6c6; border-color: #2a4; }
 </style>
 </head>
 <body>
-<h1>EMBER</h1>
+<h1>EMBER <span id="ws" class="ws down">[ws: …]</span></h1>
 <div class="sub">flight recorder</div>
 
 <div id="err" class="err"></div>
 
 <section>
-  <h2 style="font-size:1rem;color:#888;margin:.25rem 0;">Recorder</h2>
+  <h2>Recorder</h2>
   <div class="grid">
     <div>uptime</div>      <div id="uptime">—</div>
     <div>boot #</div>      <div id="boot">—</div>
@@ -43,18 +76,34 @@
 <hr>
 
 <section>
-  <h2 style="font-size:1rem;color:#888;margin:.25rem 0;">Latest sample</h2>
+  <h2>Live telemetry</h2>
+  <div class="legend">accel: <span class="x">ax</span><span class="y">ay</span><span class="z">az</span></div>
+  <canvas id="c-accel"></canvas>
+  <div class="legend"><span class="alt">altitude (m AGL)</span></div>
+  <canvas id="c-alt"></canvas>
   <div class="grid">
     <div>t (ms)</div>     <div id="t">—</div>
     <div>accel raw</div>  <div id="accel">—</div>
     <div>gyro raw</div>   <div id="gyro">—</div>
     <div>pressure</div>   <div id="press">—</div>
     <div>temp</div>       <div id="temp">—</div>
+    <div>altitude</div>   <div id="alt">—</div>
   </div>
+  <p><button id="zero">Zero altitude</button></p>
 </section>
 
 <hr>
-<small>Refresh every 1 s.</small>
+
+<section>
+  <h2>Logs</h2>
+  <table id="logs"><thead>
+    <tr><th>file</th><th>size</th><th></th></tr>
+  </thead><tbody></tbody></table>
+  <p><button id="refresh-logs">Refresh</button></p>
+</section>
+
+<hr>
+<small>Live stream over WebSocket; status polled every 1 s.</small>
 
 <script>
 const $ = (id) => document.getElementById(id);
@@ -66,12 +115,145 @@ function fmtUptime(ms) {
   const r = s % 60;
   return `${h}h ${String(m).padStart(2,"0")}m ${String(r).padStart(2,"0")}s`;
 }
-
 function fmtBytes(b) {
   if (b > 1024*1024) return (b/1024/1024).toFixed(2) + " MiB";
   if (b > 1024) return (b/1024).toFixed(1) + " KiB";
   return b + " B";
 }
+
+let p0 = null;
+function pressureToAlt(pa) {
+  if (p0 === null) p0 = pa;
+  if (pa <= 0) return 0;
+  return 44330 * (1 - Math.pow(pa / p0, 1/5.255));
+}
+
+class Strip {
+  constructor(canvas, series, opts={}) {
+    this.canvas = canvas;
+    this.ctx = canvas.getContext("2d");
+    this.series = series;          /* [{color, key}] */
+    this.cap = opts.cap || 600;    /* ~6 s @ 100 Hz */
+    this.data = series.map(() => new Array(this.cap).fill(NaN));
+    this.head = 0;
+    this.count = 0;
+    this.autoscale = opts.autoscale !== false;
+    this.min = opts.min ?? -1;
+    this.max = opts.max ??  1;
+  }
+  push(values) {
+    for (let i = 0; i < this.series.length; i++) {
+      this.data[i][this.head] = values[i];
+    }
+    this.head = (this.head + 1) % this.cap;
+    if (this.count < this.cap) this.count++;
+  }
+  draw() {
+    const c = this.canvas, ctx = this.ctx;
+    const dpr = window.devicePixelRatio || 1;
+    const w = c.clientWidth, h = c.clientHeight;
+    if (c.width !== w*dpr || c.height !== h*dpr) {
+      c.width = w*dpr; c.height = h*dpr;
+    }
+    ctx.setTransform(dpr,0,0,dpr,0,0);
+    ctx.clearRect(0,0,w,h);
+
+    if (this.count < 2) return;
+
+    let lo = +Infinity, hi = -Infinity;
+    if (this.autoscale) {
+      for (const arr of this.data) {
+        for (let i = 0; i < this.count; i++) {
+          const v = arr[i];
+          if (Number.isFinite(v)) { if (v<lo) lo=v; if (v>hi) hi=v; }
+        }
+      }
+      if (!Number.isFinite(lo)) { lo = -1; hi = 1; }
+      if (hi - lo < 1e-6) { hi = lo + 1; }
+      const pad = (hi-lo) * 0.08;
+      lo -= pad; hi += pad;
+    } else { lo = this.min; hi = this.max; }
+
+    if (lo < 0 && hi > 0) {
+      const y = h - (0 - lo) / (hi - lo) * h;
+      ctx.strokeStyle = "#222"; ctx.lineWidth = 1;
+      ctx.beginPath(); ctx.moveTo(0, y); ctx.lineTo(w, y); ctx.stroke();
+    }
+
+    const start = (this.head - this.count + this.cap) % this.cap;
+    const dx = w / (this.cap - 1);
+    for (let s = 0; s < this.series.length; s++) {
+      const arr = this.data[s];
+      ctx.strokeStyle = this.series[s].color;
+      ctx.lineWidth = 1.5;
+      ctx.beginPath();
+      let pen = false;
+      for (let i = 0; i < this.count; i++) {
+        const v = arr[(start + i) % this.cap];
+        if (!Number.isFinite(v)) { pen = false; continue; }
+        const x = i * dx;
+        const y = h - (v - lo) / (hi - lo) * h;
+        if (!pen) { ctx.moveTo(x,y); pen = true; } else { ctx.lineTo(x,y); }
+      }
+      ctx.stroke();
+    }
+
+    ctx.fillStyle = "#555"; ctx.font = "11px system-ui";
+    ctx.textAlign = "right";
+    ctx.fillText(hi.toFixed(2), w - 4, 12);
+    ctx.fillText(lo.toFixed(2), w - 4, h - 4);
+  }
+}
+
+const accelChart = new Strip($("c-accel"), [
+  { color: "#f66" }, { color: "#6c6" }, { color: "#6cf" },
+]);
+const altChart = new Strip($("c-alt"), [{ color: "#fc6" }]);
+
+/* live latest from WS */
+let lastSample = null;
+function applySample(s) {
+  lastSample = s;
+  const ax = s.ax / 16384, ay = s.ay / 16384, az = s.az / 16384;
+  accelChart.push([ax, ay, az]);
+  const alt = pressureToAlt(s.pressure_pa);
+  altChart.push([alt]);
+
+  $("t").textContent     = s.t_ms;
+  $("accel").textContent = `${s.ax}, ${s.ay}, ${s.az}  (${ax.toFixed(2)}, ${ay.toFixed(2)}, ${az.toFixed(2)} g)`;
+  $("gyro").textContent  = `${s.gx}, ${s.gy}, ${s.gz}`;
+  $("press").textContent = `${(s.pressure_pa/100).toFixed(2)} hPa`;
+  $("temp").textContent  = `${(s.temp_c100/100).toFixed(2)} °C`;
+  $("alt").textContent   = `${alt.toFixed(2)} m`;
+}
+
+function drawLoop() {
+  accelChart.draw();
+  altChart.draw();
+  requestAnimationFrame(drawLoop);
+}
+requestAnimationFrame(drawLoop);
+
+$("zero").addEventListener("click", () => {
+  if (lastSample) p0 = lastSample.pressure_pa;
+});
+
+let ws = null;
+function setWsState(s) { $("ws").textContent = `[ws: ${s}]`; $("ws").className = "ws " + (s === "up" ? "up" : "down"); }
+
+function connectWs() {
+  const proto = location.protocol === "https:" ? "wss:" : "ws:";
+  setWsState("connecting");
+  ws = new WebSocket(`${proto}//${location.host}/ws`);
+  ws.onopen = () => setWsState("up");
+  ws.onmessage = (e) => {
+    try { applySample(JSON.parse(e.data)); }
+    catch (err) { /* ignore malformed */ }
+  };
+  ws.onclose = () => { setWsState("down"); setTimeout(connectWs, 2000); };
+  ws.onerror = () => { try { ws.close(); } catch (e) {} };
+}
+connectWs();
 
 async function tick() {
   try {
@@ -84,22 +266,156 @@ async function tick() {
     $("file").textContent    = j.current_file || "—";
     $("samples").textContent = `${j.samples_written} (drops ${j.samples_dropped})`;
     $("fs").textContent      = `${fmtBytes(j.fs_used)} / ${fmtBytes(j.fs_total)}`;
-
-    if (j.sample) {
-      const s = j.sample;
-      $("t").textContent     = s.t_ms;
-      $("accel").textContent = `${s.ax}, ${s.ay}, ${s.az}`;
-      $("gyro").textContent  = `${s.gx}, ${s.gy}, ${s.gz}`;
-      $("press").textContent = `${(s.pressure_pa/100).toFixed(1)} hPa`;
-      $("temp").textContent  = `${(s.temp_c100/100).toFixed(2)} °C`;
+    /* WS-less fallback so the panel updates even if WS is down. */
+    if (j.sample && (!ws || ws.readyState !== WebSocket.OPEN)) {
+      applySample(j.sample);
     }
   } catch (e) {
     $("err").textContent = "status unavailable: " + e.message;
   }
 }
-
 tick();
 setInterval(tick, 1000);
+
+const HEADER_BYTES = 32;
+
+async function loadLogs() {
+  const tbody = $("logs").querySelector("tbody");
+  tbody.innerHTML = "";
+  let list = [];
+  try {
+    const r = await fetch("/api/logs", { cache: "no-store" });
+    if (!r.ok) throw new Error("http " + r.status);
+    list = await r.json();
+  } catch (e) {
+    const tr = document.createElement("tr");
+    tr.innerHTML = `<td colspan="3" class="err">error: ${e.message}</td>`;
+    tbody.appendChild(tr);
+    return;
+  }
+  list.sort((a, b) => a.name.localeCompare(b.name));
+  if (list.length === 0) {
+    const tr = document.createElement("tr");
+    tr.innerHTML = `<td colspan="3"><small>no logs yet</small></td>`;
+    tbody.appendChild(tr);
+    return;
+  }
+  for (const f of list) {
+    const tr = document.createElement("tr");
+    const nameCell = document.createElement("td");
+    nameCell.textContent = f.name;
+    if (f.active) {
+      const pill = document.createElement("span");
+      pill.className = "pill active"; pill.textContent = "active";
+      nameCell.appendChild(pill);
+    }
+    const sizeCell = document.createElement("td");
+    sizeCell.className = "size";
+    sizeCell.textContent = fmtBytes(f.size);
+
+    const actCell = document.createElement("td");
+    const act = document.createElement("div");
+    act.className = "act";
+
+    const dl = document.createElement("a");
+    dl.textContent = ".bin";
+    dl.href = "/api/logs/" + encodeURIComponent(f.name);
+    dl.download = f.name;
+    const dlBtn = document.createElement("button"); dlBtn.appendChild(dl);
+    /* style as button without extra anchor underline */
+    dl.style.color = "inherit"; dl.style.textDecoration = "none";
+
+    const csvBtn = document.createElement("button");
+    csvBtn.textContent = "CSV";
+    csvBtn.addEventListener("click", () => downloadCsv(f.name));
+
+    const delBtn = document.createElement("button");
+    delBtn.textContent = "delete";
+    delBtn.className = "danger";
+    delBtn.disabled = !!f.active;
+    delBtn.title = f.active ? "cannot delete the active log" : "";
+    delBtn.addEventListener("click", () => deleteLog(f.name));
+
+    act.append(dlBtn, csvBtn, delBtn);
+    actCell.appendChild(act);
+    tr.append(nameCell, sizeCell, actCell);
+    tbody.appendChild(tr);
+  }
+}
+
+async function deleteLog(name) {
+  if (!confirm(`delete ${name}?`)) return;
+  try {
+    const r = await fetch("/api/logs/" + encodeURIComponent(name),
+                          { method: "DELETE" });
+    if (!r.ok && r.status !== 204) throw new Error("http " + r.status);
+  } catch (e) {
+    alert("delete failed: " + e.message);
+  }
+  loadLogs();
+}
+
+async function downloadCsv(name) {
+  let buf;
+  try {
+    const r = await fetch("/api/logs/" + encodeURIComponent(name));
+    if (!r.ok) throw new Error("http " + r.status);
+    buf = await r.arrayBuffer();
+  } catch (e) {
+    alert("download failed: " + e.message);
+    return;
+  }
+  const csv = decodeLogToCsv(buf);
+  const blob = new Blob([csv], { type: "text/csv" });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement("a");
+  a.href = url;
+  a.download = name.replace(/\.bin$/, "") + ".csv";
+  document.body.appendChild(a); a.click(); a.remove();
+  setTimeout(() => URL.revokeObjectURL(url), 1000);
+}
+
+/* Decoder for the on-device binary log:
+ *   header  : 32 B  (magic 'EMBR' u32, version u16, sample_size u16,
+ *                    boot_count u32, header_t_ms u32, 16 B reserved)
+ *   record  : 24 B  packed ember_sample_t
+ *               u32 t_ms; i16 ax,ay,az; i16 gx,gy,gz;
+ *               i32 pressure_pa; i16 temp_c100;
+ */
+function decodeLogToCsv(arrayBuffer) {
+  const dv = new DataView(arrayBuffer);
+  const out = [
+    "t_ms,ax,ay,az,gx,gy,gz,pressure_pa,temp_c100,ax_g,ay_g,az_g,temp_c",
+  ];
+  if (dv.byteLength < HEADER_BYTES) return out.join("\n") + "\n";
+  const magic = dv.getUint32(0, true);
+  const sample_size = dv.getUint16(6, true);
+  const expected = 0x52424d45; /* 'EMBR' */
+  if (magic !== expected || sample_size !== 24) {
+    return `# bad header (magic=0x${magic.toString(16)} size=${sample_size})\n`;
+  }
+  let off = HEADER_BYTES;
+  while (off + sample_size <= dv.byteLength) {
+    const t  = dv.getUint32(off + 0, true);
+    const ax = dv.getInt16(off + 4, true);
+    const ay = dv.getInt16(off + 6, true);
+    const az = dv.getInt16(off + 8, true);
+    const gx = dv.getInt16(off + 10, true);
+    const gy = dv.getInt16(off + 12, true);
+    const gz = dv.getInt16(off + 14, true);
+    const p  = dv.getInt32(off + 16, true);
+    const tc = dv.getInt16(off + 20, true);
+    out.push(`${t},${ax},${ay},${az},${gx},${gy},${gz},${p},${tc},`
+           + `${(ax/16384).toFixed(4)},${(ay/16384).toFixed(4)},`
+           + `${(az/16384).toFixed(4)},${(tc/100).toFixed(2)}`);
+    off += sample_size;
+  }
+  return out.join("\n") + "\n";
+}
+
+$("refresh-logs").addEventListener("click", loadLogs);
+loadLogs();
+setInterval(loadLogs, 5000);
 </script>
 </body>
 </html>
