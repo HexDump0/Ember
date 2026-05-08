@@ -1,2 +1,19 @@
-CONFIG_LOG_DEFAULT_LEVEL_WARN=y
+# Release build tuning. Picked so the on-flash image is small,
+# the boot log is quiet, and no debug-only assertion / heap
+# poisoning costs CPU time during a flight.
+
+# Smaller, faster code.
+CONFIG_COMPILER_OPTIMIZATION_SIZE=y
+
+# Keep ESP_ERROR_CHECK() etc. but skip extra runtime asserts.
+CONFIG_COMPILER_OPTIMIZATION_ASSERTIONS_SILENT=y
+
+# Trim libc footprint.
+CONFIG_NEWLIB_NANO_FORMAT=y
+
+# Quiet boot + runtime logs.
 CONFIG_BOOTLOADER_LOG_LEVEL_WARN=y
+CONFIG_LOG_DEFAULT_LEVEL_WARN=y
+
+# Don't probe for a debugger on every boot.
+CONFIG_BOOTLOADER_LOG_TIMESTAMP_SOURCE_RTOS=y
